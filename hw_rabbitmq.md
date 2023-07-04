@@ -7,7 +7,7 @@
 Добавьте management plug-in и зайдите в веб-интерфейс.
 
 *Итогом выполнения домашнего задания будет приложенный скриншот веб-интерфейса RabbitMQ.*
-
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/1.jpg)
 ---
 
 ### Задание 2. Отправка и получение сообщений
@@ -28,6 +28,8 @@ $ pip install pika
 *В качестве решения домашнего задания приложите оба скриншота, сделанных на этапе выполнения.*
 
 Для закрепления материала можете попробовать модифицировать скрипты, чтобы поменять название очереди и отправляемое сообщение.
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/2.jpg)
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/3.jpg)
 
 ---
 
@@ -47,19 +49,24 @@ $ cat /etc/hosts
 Затем объедините две машины в кластер и создайте политику ha-all на все очереди.
 
 *В качестве решения домашнего задания приложите скриншоты из веб-интерфейса с информацией о доступных нодах в кластере и включённой политикой.*
-
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/5.jpg)
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/6.jpg)
 Также приложите вывод команды с двух нод:
 
 ```shell script
 $ rabbitmqctl cluster_status
 ```
 
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/4.jpg)
+
+
 Для закрепления материала снова запустите скрипт producer.py и приложите скриншот выполнения команды на каждой из нод:
 
 ```shell script
 $ rabbitmqadmin get queue='hello'
 ```
-
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/7.jpg)
 После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.
-
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/8.jpg)
+![alt text](https://github.com/SemikovaTV/hw_rabbitmq/blob/main/9.jpg)
 *Приложите скриншот результата работы второго скрипта.*
